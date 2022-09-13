@@ -13,11 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Plugin Example app',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Cuervo Document Scanner Example'),
     );
   }
 }
@@ -41,22 +41,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-  var imageAfterCrop = "";
+  List<String> _pictures = [];
 
-  void _incrementCounter(int i) {
-    if (i == 0) {
-      CuervoDocumentScanner.getPictures(Source.CAMERA).then((value) => {
-            setState(() {
-              imageAfterCrop = value?.first ?? "";
-            })
-          });
-    } else {
-      CuervoDocumentScanner.getPictures(Source.GALLERY).then((value) => {
-            setState(() {
-              imageAfterCrop = value?.first ?? "";
-            })
-          });
+  void onPressed(Source source) async {
+    List<String> pictures;
+    try {
+      // Call the method to get pictures from selected source
+      pictures = await CuervoDocumentScanner.getPictures(source) ?? [];
+      if (!mounted) return;
+      setState(() {
+        // Update the pictures list
+        _pictures = pictures;
+      });
+    } catch (e) {
+      // Handle exception here.
     }
   }
 
@@ -66,37 +64,33 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Stack(
-        fit: StackFit.expand,
-        alignment: Alignment.center,
-        children: <Widget>[
-          if (imageAfterCrop.isNotEmpty)
-            Image.file(
-              File(imageAfterCrop),
-              fit: BoxFit.fitWidth,
-            )
-          else
-            Container(),
-          Column(
-            children: [
-              ElevatedButton.icon(
-                onPressed: () => _incrementCounter(1),
-                icon: const Icon(Icons.photo_size_select_actual_rounded),
-                label: const Text("Gallery"),
-              ),
-              const SizedBox(
-                height: 10.0,
-              ),
-              ElevatedButton.icon(
-                onPressed: () {
-                  _incrementCounter(0);
-                },
-                icon: const Icon(Icons.camera),
-                label: const Text("Camera"),
-              ),
-            ],
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Row(
+              children: [
+                // Button to get pictures from gallery
+                ElevatedButton.icon(
+                  onPressed: () => onPressed(Source.GALLERY),
+                  icon: const Icon(Icons.photo_size_select_actual_rounded),
+                  label: const Text("Gallery"),
+                ),
+                const SizedBox(
+                  width: 10.0,
+                ),
+                // Button to get pictures from camera
+                ElevatedButton.icon(
+                  onPressed: () => onPressed(Source.CAMERA),
+                  icon: const Icon(Icons.camera),
+                  label: const Text("Camera"),
+                ),
+              ],
+            ),
+            // Display cropped pictures
+            for (var picture in _pictures) Image.file(File(picture)),
+          ],
+        ),
       ),
     );
   }
