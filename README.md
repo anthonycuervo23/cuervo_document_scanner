@@ -1,4 +1,4 @@
-# cunning_document_scanner
+# cuervo_document_scanner
 
 A document scanner plugin with automatic cropping function and option to pick image from gallery or camera
 
