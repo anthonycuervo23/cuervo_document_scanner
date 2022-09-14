@@ -33,7 +33,7 @@ class CuervoDocumentScanner {
 
   static Future<List<String>?> _getPicturesFromGallery() async {
     Map<Permission, PermissionStatus> statuses = await [
-      Permission.storage,
+      Permission.photos,
     ].request();
     if (statuses.containsValue(PermissionStatus.denied)) {
       throw Exception("Permission not granted");

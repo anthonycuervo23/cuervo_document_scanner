@@ -1,6 +1,6 @@
 name: cuervo_document_scanner
 description: A document scanner plugin for Flutter. Scan and crop images from gallery o camera automatically on iOS and Android.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/anthonycuervo23/cuervo_document_scanner
 
 environment:
