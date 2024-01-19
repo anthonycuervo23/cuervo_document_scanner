@@ -1,0 +1,155 @@
+name: captain_score
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 0.0.1+1
+
+environment:
+  sdk: ">=3.0.0 <3.16.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_localizations: # Add this line
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  carousel_slider: ^4.1.1
+  image_picker: ^1.0.4
+  intl: ^0.18.0
+  marquee: ^2.2.1
+  simple_gradient_text: ^1.2.2
+  equatable: ^2.0.5
+  http: ^1.0.0
+  dartz: ^0.10.1
+  get_it: ^7.6.0
+  google_fonts: ^6.1.0
+  flutter_bloc: ^8.1.1
+  flutter_svg: ^2.0.6
+  cached_network_image: ^3.3.0
+  hive: ^2.2.3
+  path_provider: ^2.0.15
+  sqflite: ^2.2.8+4
+  permission_handler: ^11.0.1
+  dio: ^5.2.0
+  share_plus: ^7.0.2
+  url_launcher: ^6.1.14
+  device_info_plus: ^9.0.0
+  package_info_plus: ^4.0.1
+  feedback: ^2.5.0
+  flutter_screenutil: ^5.8.4
+  firebase_core: ^2.24.2
+  firebase_analytics: ^10.8.0
+  firebase_crashlytics: ^3.0.5
+  firebase_messaging: 14.7.9
+  uuid: ^4.1.0
+  screenshot: ^2.1.0
+  video_player: ^2.8.2
+  lottie:
+    git:
+      url: https://github.com/parthvirani-oceanmtech/lottie-flutter.git
+      ref: c87647b
+  lazy_load_scrollview: ^1.3.0
+  flutter_math_fork: ^0.7.1
+  auto_size_text: ^3.0.0
+  flare_flutter: ^3.0.2
+  image_cropper: ^5.0.0
+  image_editor: ^1.1.0
+  extended_image: ^8.1.0
+  flutter_local_notifications: ^16.1.0
+  dotted_border: ^2.0.0+2
+  expansion_tile_card: ^3.0.0
+  google_mobile_ads: ^3.0.0
+  android_id: ^0.3.6
+  media_scanner: ^2.1.0
+  flutter_inappwebview: ^6.0.0
+  in_app_update: ^4.1.4
+  transparent_image: ^2.0.0
+  app_tracking_transparency: ^2.0.3
+  connectivity_plus: ^5.0.1
+  dart_ping: ^9.0.1
+  visibility_detector: ^0.4.0+2
+  google_maps_flutter: ^2.3.1
+  flutter_animator: ^3.2.2
+  flutter_image_compress: ^2.0.4
+  percent_indicator: ^4.2.3
+  math_expressions: ^2.4.0
+  flutter_html: ^3.0.0-beta.2
+  flutter_isolate: ^2.0.4
+  android_alarm_manager_plus: ^3.0.3
+  file_picker: ^6.0.0
+  crypto: ^3.0.1
+  firebase_auth: 4.11.0
+  palette_generator: ^0.3.3+2
+  fraction: ^5.0.2
+  flutter_gradient_colors: ^2.1.1
+  photofilters: ^3.0.1
+  dart_ping_ios: ^4.0.2
+  isolate_flutter: ^3.0.0
+  system_info2: ^4.0.0
+  flutter_staggered_grid_view: ^0.7.0
+  catcher_2:
+    git:
+      url: https://github.com/parthvirani-oceanmtech/catcher.git
+      ref: 3fe26d3
+  appsflyer_sdk:
+    git:
+      url: https://github.com/parthvirani-oceanmtech/appsflyer-flutter-plugin.git
+      ref: e7f788243bc9bfadceb5348e172dce6d2900a267
+
+  shared_preferences: ^2.2.1
+  reorderable_grid_view: ^2.2.7
+  flutter_native_splash: ^2.2.16
+  firebase_performance: ^0.9.2+7
+  archive: ^3.4.9
+  bloc: ^8.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.1
+  hive_generator: ^2.0.0
+  build_runner: ^2.4.4
+  flutter_launcher_icons: ^0.11.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/pngs/images/logo.png"
+  remove_alpha_ios: true
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/animation/
+    - assets/fonts/
+    - assets/svgs/
+    - assets/languages/
+    - assets/png/
+    - assets/ca/
+    - assets/lottie/
+    - assets/svgs/bottom_icon/
+    - assets/svgs/more_icon/
+    - assets/svgs/logo/
+    - assets/svgs/home_screen/
+    - assets/svgs/livescore_icon/
+    - assets/png/live_score/
+
+    
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Poppins-Black.ttf
+          weight: 900

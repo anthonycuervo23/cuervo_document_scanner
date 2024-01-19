@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <external-path
+        name="external_files"
+        path="." />
+
+    <cache-path name="cache" path="/data/data/live.line.guru.ipl.cricketscore.cricguru.liveipl.captainscore/" />
+    <external-cache-path name="cache" path="/data/data/live.line.guru.ipl.cricketscore.cricguru.liveipl.captainscore/" />
+</paths>

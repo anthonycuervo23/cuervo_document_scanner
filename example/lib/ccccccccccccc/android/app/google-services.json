@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "869945309171",
+    "project_id": "captain-score",
+    "storage_bucket": "captain-score.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869945309171:android:a3a44d255a0e1edf4e0486",
+        "android_client_info": {
+          "package_name": "live.line.guru.ipl.cricketscore.cricguru.liveipl.captainscore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7daMaeYW5buFsDBCbXYov5_xugnGhB1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

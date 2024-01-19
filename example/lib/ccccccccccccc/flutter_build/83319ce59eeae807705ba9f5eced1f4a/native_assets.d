@@ -1,0 +1,1 @@
+ /Volumes/Project\ Data/Hardik/scan_app_doc/captain_score/.dart_tool/flutter_build/83319ce59eeae807705ba9f5eced1f4a/native_assets.yaml: 
